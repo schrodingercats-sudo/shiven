@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
       {/* 1. Background Text "Hey, there" - Behind Image */}
       {/* Mobile: top-[16%] centered. Tablet/Desktop: split flank layout. */}
       <div className="absolute top-[16%] md:top-[15%] lg:top-[17%] xl:top-[15%] left-0 right-0 mx-auto w-full max-w-full md:max-w-5xl lg:max-w-[58rem] xl:max-w-[72rem] flex justify-center gap-3 md:justify-between md:gap-0 items-center px-4 z-0 pointer-events-none select-none">
-        <span className="font-serif italic font-light text-[17vw] md:text-[10rem] lg:text-[9rem] xl:text-[11.5rem] text-[#222222] opacity-90 leading-none transform translate-y-0 md:translate-y-4 opacity-0 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+        <span className="font-serif italic font-light text-[17vw] md:text-[10rem] lg:text-[9rem] xl:text-[11.5rem] text-[#222222] opacity-90 leading-none transform translate-y-0 md:translate-y-4 opacity-0 animate-slide-in-left" style={{ animationDelay: '0.3s' }}>
           Hey,
         </span>
-        <span className="font-serif italic font-light text-[17vw] md:text-[10rem] lg:text-[9rem] xl:text-[11.5rem] text-[#222222] opacity-90 leading-none transform translate-y-0 md:translate-y-4 opacity-0 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+        <span className="font-serif italic font-light text-[17vw] md:text-[10rem] lg:text-[9rem] xl:text-[11.5rem] text-[#222222] opacity-90 leading-none transform translate-y-0 md:translate-y-4 opacity-0 animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
           there
         </span>
       </div>
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           style={{
              maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
              WebkitMaskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)',
-             animationDelay: '0.1s'
+             animationDelay: '0.2s'
           }}
         />
       </div>
@@ -47,12 +47,12 @@ const Hero: React.FC = () => {
         
         {/* Floating Elements (Badge & Description) */}
         {/* Mobile: Hidden. Desktop preserved. */}
-        <div className="hidden md:block absolute top-[30%] left-4 sm:top-[42%] md:top-[42%] lg:top-[48%] md:left-8 lg:left-16 xl:left-24 z-20 scale-90 md:scale-100 origin-left opacity-0 animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
+        <div className="hidden md:block absolute top-[30%] left-4 sm:top-[42%] md:top-[42%] lg:top-[48%] md:left-8 lg:left-16 xl:left-24 z-20 scale-90 md:scale-100 origin-left opacity-0 animate-slide-in-left" style={{ animationDelay: '0.7s' }}>
            <StatusBadge />
         </div>
 
         {/* Desktop Description (Hidden on Mobile) */}
-        <div className="absolute top-[42%] lg:top-[48%] right-4 md:right-8 lg:right-16 xl:right-24 z-20 max-w-[240px] text-right hidden md:block opacity-0 animate-slide-in-right" style={{ animationDelay: '0.6s' }}>
+        <div className="absolute top-[42%] lg:top-[48%] right-4 md:right-8 lg:right-16 xl:right-24 z-20 max-w-[240px] text-right hidden md:block opacity-0 animate-slide-in-right" style={{ animationDelay: '0.7s' }}>
            <p className="text-muted-black text-base font-medium leading-relaxed">
              Specialized in Web Design, <br />
              UX / UI, Webflow, and Front <br />
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between w-full mt-auto">
           
           {/* "I AM SHIVEN" - Fluid Scaling */}
-          <div className="flex flex-col leading-[0.85] tracking-tighter text-black select-none mb-2 md:mb-0 relative opacity-0 animate-slide-in-left" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col leading-[0.85] tracking-tighter text-black select-none mb-2 md:mb-0 relative opacity-0 animate-slide-in-left" style={{ animationDelay: '0.5s' }}>
             {/* Reduced lg and xl text sizes to prevent overcrowding */}
             <span className="text-[16vw] sm:text-[15vw] md:text-[7.5rem] lg:text-[6.5rem] xl:text-[8.5rem] font-black uppercase font-sans mix-blend-normal">
               I AM
@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
 
           {/* "DIGITAL PRODUCT DESIGNER" - Left aligned text */}
           {/* Hidden on Mobile, Visible on MD+ */}
-          <div className="hidden md:flex flex-col items-start md:mb-4 opacity-0 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
+          <div className="hidden md:flex flex-col items-start md:mb-4 opacity-0 animate-slide-in-right" style={{ animationDelay: '0.5s' }}>
              {/* Removed Mobile Description Paragraph */}
 
             {/* Scaled down for laptop (lg:text-4xl) */}
