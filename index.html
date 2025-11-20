@@ -25,27 +25,32 @@
             },
             keyframes: {
               'slide-up': {
-                '0%': { transform: 'translateY(100px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
+                '0%': { transform: 'translateY(60px)', opacity: '0', filter: 'blur(12px)' },
+                '100%': { transform: 'translateY(0)', opacity: '1', filter: 'blur(0px)' },
               },
               'slide-down': {
-                '0%': { transform: 'translateY(-100px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
+                '0%': { transform: 'translateY(-60px)', opacity: '0', filter: 'blur(12px)' },
+                '100%': { transform: 'translateY(0)', opacity: '1', filter: 'blur(0px)' },
               },
               'slide-in-left': {
-                '0%': { transform: 'translateX(-100px)', opacity: '0' },
-                '100%': { transform: 'translateX(0)', opacity: '1' },
+                '0%': { transform: 'translateX(-60px)', opacity: '0', filter: 'blur(12px)' },
+                '100%': { transform: 'translateX(0)', opacity: '1', filter: 'blur(0px)' },
               },
               'slide-in-right': {
-                '0%': { transform: 'translateX(100px)', opacity: '0' },
-                '100%': { transform: 'translateX(0)', opacity: '1' },
+                '0%': { transform: 'translateX(60px)', opacity: '0', filter: 'blur(12px)' },
+                '100%': { transform: 'translateX(0)', opacity: '1', filter: 'blur(0px)' },
               },
+              'fade-in': {
+                '0%': { opacity: '0', filter: 'blur(4px)' },
+                '100%': { opacity: '1', filter: 'blur(0px)' },
+              }
             },
             animation: {
-              'slide-up': 'slide-up 1s ease-out forwards',
-              'slide-down': 'slide-down 0.8s ease-out forwards',
-              'slide-in-left': 'slide-in-left 1s ease-out forwards',
-              'slide-in-right': 'slide-in-right 1s ease-out forwards',
+              'slide-up': 'slide-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'slide-down': 'slide-down 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'slide-in-left': 'slide-in-left 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'slide-in-right': 'slide-in-right 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'fade-in': 'fade-in 0.8s ease-out forwards',
             }
           }
         }
@@ -54,11 +59,17 @@
   <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react": "https://esm.sh/react@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.8",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three",
+    "maath": "https://esm.sh/maath@0.10.7",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.13.1"
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
   }
 }
 </script>
@@ -75,6 +86,36 @@
   body {
     position: fixed; /* Strictly locks the viewport on iOS */
     inset: 0;
+  }
+
+  /* --- Custom Scrollbar Design --- */
+  
+  /* Width and Height for Webkit Browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Track - Transparent to blend with background */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  
+  /* Thumb - Muted Black to match typography */
+  ::-webkit-scrollbar-thumb {
+    background: #222222;
+    border-radius: 4px;
+  }
+
+  /* Thumb Hover - Accent Orange for interactivity */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF9F40;
+  }
+  
+  /* Firefox Scrollbar Support */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #222222 transparent;
   }
 </style>
 </head>
