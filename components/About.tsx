@@ -8,7 +8,7 @@ const About: React.FC = () => {
         <div className="w-full lg:w-1/2 relative">
            <div className="aspect-[3/4] rounded-lg overflow-hidden">
              <img 
-               src="https://aboutncknc.edgeone.app/Whisk_5951287c86eeeb087f24f20ad98ceea1dr.png" 
+               src="https://upsalcec.edgeone.app/shivenupscaled.png" 
                alt="Portrait" 
                className="w-full h-full object-cover"
              />
