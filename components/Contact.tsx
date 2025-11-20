@@ -1,11 +1,9 @@
 import React from 'react';
 import { Button } from './ui/Button';
-import Lanyard from './Lanyard';
-
 const Contact: React.FC = () => {
   return (
     <section className="w-full h-full bg-cream overflow-hidden lg:overflow-y-auto flex flex-col pt-32 pb-4 px-4 md:px-12 lg:pt-48 lg:pb-24 animate-slide-up">
-      <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col lg:flex-row gap-6 lg:gap-12 min-h-0">
+      <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col lg:flex-row gap-6 lg:gap-12 min-h-0 justify-center">
         
         {/* Left Column: Form */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center shrink-0 z-10">
@@ -53,12 +51,6 @@ const Contact: React.FC = () => {
               </Button>
             </div>
           </form>
-        </div>
-
-        {/* Right Column: Lanyard */}
-        {/* On mobile, use flex-1 to fill remaining space without overflowing. min-h-0 allows shrinking. */}
-        <div className="w-full lg:w-1/2 flex-1 lg:h-auto relative rounded-2xl overflow-hidden bg-transparent min-h-[200px] lg:min-h-0">
-             <Lanyard />
         </div>
 
       </div>
